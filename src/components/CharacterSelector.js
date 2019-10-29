@@ -9,14 +9,16 @@ class CharacterSelector extends Component {
     }
 
     handleChange(event) {
-        this.props.onCharacterSelect(event.target.value);
+        const character = this.props.characters[event.target.value]
+        this.props.onCharacterSelect(character);
+        console.log(character)
     }
 
     render () {
 
-        const characterOptions = this.props.characters.map(character => {
+        const characterOptions = this.props.characters.map((character, index) => {
             return (
-                <option value={character} key={character.name}>{character.name}</option>
+                <option value={index} key={character.name}>{character.name}</option>
             )
         })
 
