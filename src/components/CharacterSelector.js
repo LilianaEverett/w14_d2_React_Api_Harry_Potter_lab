@@ -11,7 +11,6 @@ class CharacterSelector extends Component {
     handleChange(event) {
         const character = this.props.characters[event.target.value]
         this.props.onCharacterSelect(character);
-        console.log(character)
     }
 
     render () {

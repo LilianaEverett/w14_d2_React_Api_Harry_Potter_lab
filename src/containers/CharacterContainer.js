@@ -1,5 +1,6 @@
-import React, {Component} from 'react'
-import CharacterSelector from "../components/CharacterSelector"
+import React, {Component} from 'react';
+import CharacterSelector from "../components/CharacterSelector";
+import CharacterDetail from "../components/CharacterDetail";
 
 class CharacterContainer extends Component {
 
@@ -27,7 +28,8 @@ class CharacterContainer extends Component {
         return (
             <React.Fragment>
             <CharacterSelector onCharacterSelect={this.handleSelectedCharacter} characters={this.state.data}/>
-            <p>{this.state.selectedCharacter.name} </p>
+            <HouseSelector characters={this.state.data}/>
+            <CharacterDetail character={this.state.selectedCharacter}/>
             </React.Fragment>
             
         )
