@@ -17,7 +17,7 @@ class CharacterSelector extends Component {
 
         const characterOptions = this.props.characters.map((character, index) => {
             return (
-                <option value={index} key={character.name}>{character.name}</option>
+                <option value={index} key={index}>{character.name}</option>
             )
         })
 

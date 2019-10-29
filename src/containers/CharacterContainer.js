@@ -28,7 +28,7 @@ class CharacterContainer extends Component {
         return (
             <React.Fragment>
             <CharacterSelector onCharacterSelect={this.handleSelectedCharacter} characters={this.state.data}/>
-            <HouseSelector characters={this.state.data}/>
+            {/* <HouseSelector characters={this.state.data}/> */}
             <CharacterDetail character={this.state.selectedCharacter}/>
             </React.Fragment>
             
